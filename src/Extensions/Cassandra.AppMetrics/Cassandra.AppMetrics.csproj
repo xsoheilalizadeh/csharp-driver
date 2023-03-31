@@ -7,8 +7,7 @@
     <FileVersion>3.19.2.0</FileVersion>
     <VersionPrefix>3.19.2</VersionPrefix>
     <Authors>DataStax</Authors>
-    <TargetFrameworks Condition="'$(BuildCoreOnly)' != 'True'">netstandard2.0;net461</TargetFrameworks>
-    <TargetFrameworks Condition="'$(BuildCoreOnly)' == 'True'">netstandard2.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>DataStax</Authors>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
