@@ -1,39 +1,39 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>net462;net7.0</TargetFrameworks>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <PublicSign>false</PublicSign>
-    <AssemblyName>Cassandra.Tests</AssemblyName>
-    <AssemblyOriginatorKeyFile>../../build/datastax.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
-    <PackageId>Cassandra.Tests</PackageId>
-    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    <LangVersion>7.1</LangVersion>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Appveyor.TestLogger" Version="2.0.0" />
-    <PackageReference Include="Microsoft.DotNet.InternalAbstractions" Version="1.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.1" />
-    <PackageReference Include="Moq" Version="4.7.99" />
-    <PackageReference Include="NUnit" Version="3.8.1" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
-    <PackageReference Include="NunitXml.TestLogger" Version="2.1.41" />
-    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
-    <PackageReference Include="XunitXml.TestLogger" Version="2.1.26" />
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-    <PackageReference Include="System.Threading.Thread" Version="4.3.0" />
-    <PackageReference Include="System.Threading.Tasks.Parallel" Version="4.3.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Extensions\Cassandra.AppMetrics\Cassandra.AppMetrics.csproj" />
-  </ItemGroup>
-  <ItemGroup Condition=" $([System.Text.RegularExpressions.Regex]::IsMatch('$(TargetFramework)', '^net4\d'))">
-    <Reference Include="System.Data" />
-    <Reference Include="System.Numerics" />
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
+    <PropertyGroup>
+        <TargetFrameworks>net462;net7.0</TargetFrameworks>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <PublicSign>false</PublicSign>
+        <AssemblyName>Cassandra.Tests</AssemblyName>
+        <AssemblyOriginatorKeyFile>../../build/datastax.snk</AssemblyOriginatorKeyFile>
+        <SignAssembly>true</SignAssembly>
+        <PackageId>Cassandra.Tests</PackageId>
+        <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+        <LangVersion>7.1</LangVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Appveyor.TestLogger" Version="2.0.0"/>
+        <PackageReference Include="Microsoft.DotNet.InternalAbstractions" Version="1.0.0"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.1"/>
+        <PackageReference Include="Moq" Version="4.7.99"/>
+        <PackageReference Include="NUnit" Version="3.8.1"/>
+        <PackageReference Include="NUnit3TestAdapter" Version="3.13.0"/>
+        <PackageReference Include="NunitXml.TestLogger" Version="2.1.41"/>
+        <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0"/>
+        <PackageReference Include="XunitXml.TestLogger" Version="2.1.26"/>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1"/>
+        <PackageReference Include="System.Threading.Thread" Version="4.3.0"/>
+        <PackageReference Include="System.Threading.Tasks.Parallel" Version="4.3.0"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Extensions\Cassandra.AppMetrics\Cassandra.AppMetrics.csproj"/>
+    </ItemGroup>
+    <ItemGroup Condition=" $([System.Text.RegularExpressions.Regex]::IsMatch('$(TargetFramework)', '^net4\d'))">
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Numerics"/>
+        <Reference Include="System"/>
+<!--        <Reference Include="Microsoft.CSharp"/>-->
+    </ItemGroup>
 </Project>
